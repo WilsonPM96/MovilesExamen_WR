@@ -2,8 +2,11 @@ package com.example.wilson.examen_moviles
 
 import android.content.Context
 import android.content.Intent
+import android.support.v4.content.ContextCompat.startActivity
+import android.support.v7.app.AlertDialog
 import android.support.v7.view.menu.ShowableListMenu
 import android.support.v7.widget.RecyclerView
+import android.util.Log
 import android.view.*
 import android.widget.Button
 import android.widget.PopupMenu
@@ -99,7 +102,7 @@ class AdaptadorEstudiante(internal var arrayEstudiantes: ArrayList<Estudiante>, 
             }
 
             eliminar?.setOnMenuItemClickListener { menuItem: MenuItem? ->
-             elimnarEstudiante()
+                elimnarEstudiante()
             }
 
             enviarCorreo?.setOnMenuItemClickListener { menuItem: MenuItem? ->
@@ -126,13 +129,19 @@ class AdaptadorEstudiante(internal var arrayEstudiantes: ArrayList<Estudiante>, 
         }
 
         fun elimnarEstudiante(): Boolean {
-
             val dbHandlerEstudiante = DbHandlerEstudiante(ctx)
-
-            dbHandlerEstudiante.eliminarEstudiante(arrayEstudiantes[adapterPosition].idEstudiante)
+            val modal = AlertDialog.Builder(ctx)
+            modal.setMessage(R.string.nombreOpcionConfirmar)
+                    .setPositiveButton(R.string.Si, { dialog, which ->
+                        dbHandlerEstudiante.eliminarEstudiante(arrayEstudiantes[adapterPosition].idEstudiante)
+                    }
+                    )
+                    .setNegativeButton(R.string.No, null)
+            val dialogo = modal.create()
+            dialogo.show()
             return true
-
         }
+
 
         fun editarEstudiante(): Boolean {
 
@@ -146,6 +155,7 @@ class AdaptadorEstudiante(internal var arrayEstudiantes: ArrayList<Estudiante>, 
 
 
     }
+
 }
 
 

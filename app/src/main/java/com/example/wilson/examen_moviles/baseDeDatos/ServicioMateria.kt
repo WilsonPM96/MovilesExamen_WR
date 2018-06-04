@@ -61,6 +61,38 @@ class DbHandlerMateria(context: Context) : SQLiteOpenHelper(context, ServicioMat
         dbWriteable.close()
 
     }
+    fun eliminarMateria(idMateria:Int){
+
+        val dbWriteable = writableDatabase
+
+        val queryBorrarMaterias = "DELETE FROM "+ServicioMateria.BDD_TABLA_MATERIA_NOMBRE+
+                " WHERE "+ServicioMateria.BDD_TABLA_MATERIA_NOMBRE+"."+ServicioMateria.BDD_TABLA_MATERIA_CAMPO_ESTUDIANTE_IDESTUDIANTE+ " = "+idMateria
+
+        dbWriteable.execSQL(queryBorrarMaterias)
+        Log.i("delete",queryBorrarMaterias)
+
+        dbWriteable.close()
+
+    }
+
+//    fun updateMateria(idMateria: Int, codigo: String, descripcion: String, activo: String, fechaCreacion: String, numeroHoras: Int, estudianteId: Int) {
+//        val dbWriteable = writableDatabase
+//
+//        val queryUpdateMateria = "UPDATE "+ServicioMateria.BDD_TABLA_MATERIA_NOMBRE+"\n" +
+//                "SET "+ServicioMateria.BDD_TABLA_MATERIA_CAMPO_IDMATERIA+" = '"+idMateria+"',\n" +
+//                "\t"+ServicioMateria.BDD_TABLA_MATERIA_CAMPO_CODIGO+" = '"+codigo+"',\n" +
+//                "\t"+ServicioMateria.BDD_TABLA_MATERIA_CAMPO_DESCRIPCION+" = '"+descripcion+"',\n" +
+//                "\t"+ServicioMateria.BDD_TABLA_MATERIA_CAMPO_ACTIVO+" = "+activo+",\n" +
+//                "\t"+ServicioMateria.BDD_TABLA_MATERIA_CAMPO_FECHACREACION+" = '"+fechaCreacion+"'\n" +
+//                "\t"+ServicioMateria.BDD_TABLA_MATERIA_CAMPO_NUMEROHORASPORSEMANA+" = '"+numeroHoras+"'\n" +
+//                "WHERE "+ServicioMateria.BDD_TABLA_MATERIA_CAMPO_ESTUDIANTE_IDESTUDIANTE+" = "+estudianteId+"'\n"+
+//
+//        dbWriteable.execSQL(queryUpdateMateria)
+//        Log.i("update", queryUpdateMateria)
+//
+//        dbWriteable.close()
+//
+//    }
 
     fun leerDatos(consulta:String):ArrayList<Materia> {
         val dbReadable = readableDatabase

@@ -14,8 +14,10 @@
     <string name="nombreOpcionEditar">Editar</string>
     <string name="nombreOpcionELiminar">Eliminar</string>
     <string name="nombreOpcionCorreo">Enviar Correo</string>
-    <!--<string name="nombreOpcionConfirmar">Confirmar</string>-->
-    <!--<string name="nombreOpcionCancelar">Cancelar</string>-->
+    <string name="nombreOpcionConfirmar">Confirmar</string>
+    <string name="nombreOpcionCancelar">Cancelar</string>
+    <string name="Si">Si</string>
+    <string name="No">No</string>
 
 
     <string name="botonRegistrarEstudiante">Crear Estudiante</string>
