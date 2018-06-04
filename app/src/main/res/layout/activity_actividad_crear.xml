@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActividadCrear">
+
+    <RelativeLayout
+        android:layout_width="368dp"
+        android:layout_height="491dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/txt_nombre_autor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="69dp"
+            android:text="@string/nombreTxtNombreEstudiante" />
+
+        <TextView
+            android:id="@+id/txt_apellido_autor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/txt_nombre_autor"
+            android:layout_marginTop="137dp"
+            android:text="@string/nombreTxtApellidoEstudiante" />
+
+        <TextView
+            android:id="@+id/txt_fecha_nac"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/txt_nombre_autor"
+            android:layout_marginTop="200dp"
+            android:text="@string/nombreTxtfechaNacEstudiante" />
+
+        <EditText
+            android:id="@+id/editText_fechaNac"
+            android:layout_width="151dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/txt_fecha_nac"
+            android:layout_alignStart="@+id/editText_numeroPeliculas"
+            android:ems="10"
+            android:focusable="false"
+            android:inputType="date" />
+
+        <TextView
+            android:id="@+id/txt_numero_pel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/txt_nombre_autor"
+            android:layout_marginBottom="206dp"
+            android:text="@string/nombreTxtSemestreActual" />
+
+        <Spinner
+            android:id="@+id/spinner_graduado"
+            android:layout_width="295dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="142dp"
+            android:spinnerMode="dialog" />
+
+        <EditText
+            android:id="@+id/editTxt_nombreEstudiante"
+            android:layout_width="152dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/txt_nombre_autor"
+            android:layout_alignStart="@+id/editText_fechaNac"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/editTxt_apellidoEstudiante"
+            android:layout_width="149dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/txt_apellido_autor"
+            android:layout_alignStart="@+id/editText_fechaNac"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/editText_numeroPeliculas"
+            android:layout_width="147dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/txt_numero_pel"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="29dp"
+            android:ems="10"
+            android:inputType="date" />
+
+        <Button
+            android:id="@+id/btn_RegistrarEstudiante"
+            android:layout_width="218dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="58dp"
+            android:text="@string/botonRegistrarEstudiante" />
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

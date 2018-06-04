@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Examen</string>
+    <string name="nombreBotonCrear">Crear</string>
+    <string name="nombreBotonListar">Listar</string>
+    <string name="nombreTxtNombreEstudiante">Nombre Estudiante</string>
+    <string name="nombreTxtApellidoEstudiante">Apellido Estudiante</string>
+    <string name="nombreTxtfechaNacEstudiante">Fecha de Nacimiento</string>
+    <string name="nombreTxtSemestreActual">Semestre Actual</string>
+    <string name="nombreTxtGraduado">Graduado</string>
+    <string name="nombreBtnDetalles">Detalles</string>
+    <string name="nombreBtnNuevo">Nuevo</string>
+
+
+    <string name="nombreOpcionEditar">Editar</string>
+    <string name="nombreOpcionELiminar">Eliminar</string>
+    <string name="nombreOpcionCorreo">Enviar Correo</string>
+    <!--<string name="nombreOpcionConfirmar">Confirmar</string>-->
+    <!--<string name="nombreOpcionCancelar">Cancelar</string>-->
+
+
+    <string name="botonRegistrarEstudiante">Crear Estudiante</string>
+    <string name="botonRegistrarMateria">Crear Materia</string>
+    <string name="botonEditarEstudiante">Editar Estudiante</string>
+
+
+    <string name="nombreTxtNombreMateria">Id Materia</string>
+    <string name="nombreTxtCodigoMateria">Codigo</string>
+    <string name="nombreTxtDescripcion">Descripcion</string>
+    <string name="nombreTxtnumeroHoras">Numero de Horas</string>
+
+    <string name="nombreBtnActulizarActividad">Actualizar</string>
+
+    <string name="opcionGraduadoSpinner">Graduado</string>
+    <string name="opcionNoGraduadoSpinner">No Graduado</string>
+
+    <string name="elEstudianteEstaGraduado">El estudiante está graduado</string>
+    <string name="elEstudianteNoestaGraduado">El estudiante no está graduado</string>
+
+    <string name="Materias">materias</string>
+
+
+</resources>

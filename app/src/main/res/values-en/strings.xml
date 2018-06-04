@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Exam</string>
+    <string name="nombreBotonCrear">New</string>
+    <string name="nombreBotonListar">List</string>
+    <string name="nombreTxtNombreEstudiante">Name</string>
+    <string name="nombreTxtApellidoEstudiante">Last Name</string>
+    <string name="nombreTxtfechaNacEstudiante">Birthdate</string>
+    <string name="nombreTxtSemestreActual">Semester</string>
+    <string name="nombreTxtGraduado">Graduated</string>
+    <string name="nombreBtnDetalles">Details</string>
+    <string name="nombreBtnNuevo">Create</string>
+
+
+    <string name="nombreOpcionEditar">Edit</string>
+    <string name="nombreOpcionELiminar">Delete</string>
+    <string name="nombreOpcionCorreo">Send Email</string>
+
+
+    <string name="botonRegistrarEstudiante">Create Student</string>
+    <string name="botonRegistrarMateria">Create Subject</string>
+    <string name="botonEditarEstudiante">Edit Student</string>
+
+
+    <string name="nombreTxtNombreMateria">Subject ID</string>
+    <string name="nombreTxtCodigoMateria">Code</string>
+    <string name="nombreTxtDescripcion">Description</string>
+    <string name="nombreTxtnumeroHoras">Hours</string>
+
+    <string name="nombreBtnActulizarActividad">Refresh</string>
+
+    <string name="opcionGraduadoSpinner">Graduated</string>
+    <string name="opcionNoGraduadoSpinner">Not Graduated</string>
+
+    <string name="elEstudianteestaGraduado">The studen is graduated</string>
+    <string name="elEstudianteNoestaGraduado">The student is not graduated</string>
+
+    <string name="Materias">subjects</string>
+
+
+
+
+</resources>

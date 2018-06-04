@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityDetalleMateria">
+
+    <RelativeLayout
+        android:layout_width="359dp"
+        android:layout_height="479dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView_nombreMateria_detalle"
+            android:layout_width="198dp"
+            android:layout_height="52dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="49dp"
+            android:gravity="center"
+            android:text="TextView"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="93dp"
+            tools:layout_editor_absoluteY="56dp" />
+
+        <TextView
+            android:id="@+id/textView_codigo_detalle"
+            android:layout_width="154dp"
+            android:layout_height="52dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="27dp"
+            android:layout_marginTop="143dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="TextView"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView_descripcion_materia"
+            android:layout_width="154dp"
+            android:layout_height="52dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/textView_codigo_detalle"
+            android:layout_marginEnd="18dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="TextView"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView_fechaCreacion_Materia"
+            android:layout_width="154dp"
+            android:layout_height="52dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/textView_codigo_detalle"
+            android:layout_marginBottom="200dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="TextView"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView_horas_Materia"
+            android:layout_width="154dp"
+            android:layout_height="52dp"
+            android:layout_alignStart="@+id/textView_descripcion_materia"
+            android:layout_alignTop="@+id/textView_fechaCreacion_Materia"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="TextView"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
