@@ -20,6 +20,9 @@ class MainActivity : AppCompatActivity() {
         btn_listar.setOnClickListener{
             view: View -> irAActividadListar()
         }
+        btn_fuel.setOnClickListener{
+            view: View -> iraActividadFuel()
+        }
     }
 
     private fun irAActividadListar() {
@@ -30,6 +33,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun irAActividadCrear() {
         intent = Intent(this, ActividadCrear::class.java)
+        finish()
+        startActivity(intent)
+    }
+    fun iraActividadFuel() {
+        intent = Intent(this, HttpFuelActivity::class.java)
         finish()
         startActivity(intent)
     }
