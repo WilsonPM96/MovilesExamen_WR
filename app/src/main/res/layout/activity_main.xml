@@ -38,5 +38,14 @@
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="46dp"
             android:text="@string/nombreBotonListar" />
+
+        <Button
+            android:id="@+id/btn_fuel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/btn_crear"
+            android:layout_alignStart="@+id/btn_crear"
+            android:layout_marginBottom="86dp"
+            android:text="Fuel" />
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>
