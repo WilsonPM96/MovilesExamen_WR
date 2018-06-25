@@ -40,6 +40,7 @@
 
     <string name="Materias">materias</string>
     <string name="title_activity_http_fuel">HttpFuelActivity</string>
+    <string name="title_activity_google_maps">Map</string>
 
 
 </resources>

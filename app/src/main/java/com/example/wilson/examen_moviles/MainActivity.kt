@@ -23,6 +23,10 @@ class MainActivity : AppCompatActivity() {
         btn_fuel.setOnClickListener{
             view: View -> iraActividadFuel()
         }
+
+        boton_mapa.setOnClickListener{
+            view: View -> iraActividadMapa()
+        }
     }
 
     private fun irAActividadListar() {
@@ -37,6 +41,11 @@ class MainActivity : AppCompatActivity() {
     }
     fun iraActividadFuel() {
         intent = Intent(this, HttpFuelActivity::class.java)
+        startActivity(intent)
+    }
+
+    fun iraActividadMapa() {
+        intent = Intent(this, GoogleMapsActivity::class.java)
         startActivity(intent)
     }
 }
