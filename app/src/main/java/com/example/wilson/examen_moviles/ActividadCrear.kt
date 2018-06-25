@@ -4,13 +4,20 @@ import android.app.DatePickerDialog
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.EditText
+import com.beust.klaxon.Klaxon
 import com.example.wilson.examen_moviles.baseDeDatos.DbHandlerEstudiante
 import com.example.wilson.examen_moviles.entidades.Estudiante
+import com.github.kittinunf.fuel.Fuel
+import com.github.kittinunf.fuel.httpGet
+import com.github.kittinunf.fuel.httpPost
+import com.github.kittinunf.result.Result
 import kotlinx.android.synthetic.main.activity_actividad_crear.*
+import org.json.JSONObject
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -73,25 +80,31 @@ class ActividadCrear : AppCompatActivity(), View.OnClickListener{
     }
 
     private fun registrarEstudiante() {
-
-        val dbHandlerEstudiante = DbHandlerEstudiante(this)
-
         val nombreEstudiante:EditText = findViewById(R.id.editTxt_nombreEstudiante)
         val apellidoEstudiante:EditText = findViewById(R.id.editTxt_apellidoEstudiante)
-        val fechaNacimiento:EditText = findViewById(R.id.editText_fechaNac)
-        val semestreActual: EditText = findViewById(R.id.editText_numeroPeliculas)
+        val json = JSONObject()
+        json.put("idEstudiante", 1)
+        json.put("nombres", nombreEstudiante.text)
 
+        json.put("apellidos", apellidoEstudiante.text)
 
+        json.put("fechaNacimiento", "25062018")
 
-        val estudiante=Estudiante(0, nombreEstudiante.text.toString(),
-                apellidoEstudiante.text.toString(),
-                fechaNacimiento.text.toString(),
-                semestreActual.text.toString().toInt(),
-                graduado)
+        json.put("semestreActual", 7)
 
+        json.put("graduado", "Graduado")
 
+        val httpRequest = Fuel.post("http://172.31.104.12:1337/Estudiante").body(json.toString())
+        httpRequest.headers["Content-Type"] = "application/json"
+        httpRequest.response { request, response, result ->
 
-        dbHandlerEstudiante.insertarEstudiante(estudiante.nombres, estudiante.apellidos, estudiante.fechaNacimiento, estudiante.semestreActual, estudiante.graduado)
+            Log.i("mensaje",request.toString())
+
+            Log.i("mensaje",response.toString())
+
+            Log.i("mensaje",result.toString())
+        }
+
         val intent = Intent (this, MainActivity::class.java)
         finish()
         startActivity(intent)

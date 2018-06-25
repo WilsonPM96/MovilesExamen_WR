@@ -28,6 +28,13 @@ class GoogleMapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.On
     val zoom = 17f
     val casaCulturaLatLang = LatLng(-0.210066, -78.495162)
     val superMaxiLatLang = LatLng(-0.206692, -78.486990)
+    val materiaLatLang = LatLng(Double(-(valorRandom(0..1)),-(valorRandom(50..80)))
+
+    private val materia: CameraPosition = CameraPosition.Builder()
+            .target(materiaLatLang)
+            .zoom(zoom)
+            .build()
+
     private val casaCultura: CameraPosition = CameraPosition.Builder()
             .target(casaCulturaLatLang)
             .zoom(zoom)
@@ -46,6 +53,7 @@ class GoogleMapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.On
     override fun onCameraMoveStarted(p0: Int) {
 
     }
+
 
     override fun onCameraMove() {
 
@@ -80,6 +88,12 @@ class GoogleMapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.On
         val mapFragment = supportFragmentManager
                 .findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
+    }
+
+    fun valorRandom(valores: IntRange) : Int {
+        var r = Random()
+        var valorRandom = r.nextInt(valores.last - valores.first) + valores.first
+        return valorRandom
     }
 
     /**
@@ -146,7 +160,7 @@ class GoogleMapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.On
 
 
             button_quito_julio_andrade.setOnClickListener { v ->
-                anadirMarcador(casaCulturaLatLang, "Marcador en Quito Casa Cultura")
+                anadirMarcador(materiaLatLang, "Marcador en Quito Casa Cultura")
 
 
                 moverCamaraPorPosicion(casaCultura)
@@ -255,4 +269,5 @@ class GoogleMapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.On
         mMap.moveCamera(update)
 //        }
     }
+
 }

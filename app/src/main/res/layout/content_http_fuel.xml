@@ -8,4 +8,90 @@
     tools:context="com.example.wilson.examen_moviles.HttpFuelActivity"
     tools:showIn="@layout/activity_http_fuel">
 
+    <TextView
+        android:id="@+id/id_Estudiante"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="172dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="17dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="44dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/id_Estudiante"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/id_Estudiante"
+        app:layout_constraintTop_toBottomOf="@+id/id_Estudiante" />
+
+    <TextView
+        android:id="@+id/apellidos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="64dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/nombre"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/nombre"
+        app:layout_constraintTop_toBottomOf="@+id/nombre" />
+
+    <TextView
+        android:id="@+id/fechaNacimiento"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="60dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/apellidos"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/apellidos"
+        app:layout_constraintTop_toBottomOf="@+id/apellidos" />
+
+    <TextView
+        android:id="@+id/semestreActual"
+        android:layout_width="wrap_content"
+        android:layout_height="21dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="40dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/fechaNacimiento"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/fechaNacimiento"
+        app:layout_constraintTop_toBottomOf="@+id/fechaNacimiento" />
+
+    <TextView
+        android:id="@+id/graduado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/semestreActual"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/semestreActual"
+        app:layout_constraintTop_toBottomOf="@+id/semestreActual"
+        app:layout_constraintVertical_bias="0.197" />
+
+    <Button
+        android:id="@+id/button_mapa_materia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Ir a mapa Materia"
+        app:layout_constraintEnd_toEndOf="@+id/graduado"
+        app:layout_constraintHorizontal_bias="0.41"
+        app:layout_constraintStart_toStartOf="@+id/graduado"
+        app:layout_constraintTop_toBottomOf="@+id/graduado" />
 </android.support.constraint.ConstraintLayout>
