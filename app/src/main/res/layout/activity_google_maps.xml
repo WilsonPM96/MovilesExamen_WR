@@ -28,7 +28,7 @@
             android:layout_marginTop="0dp">
 
             <Button
-                android:id="@+id/button_quito_julio_andrade"
+                android:id="@+id/button_materia1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -36,6 +36,23 @@
                 android:layout_marginStart="36dp"
                 android:layout_marginTop="27dp"
                 android:text="Materia 1" />
+
+            <Button
+                android:id="@+id/button_materia2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/button_materia1"
+                android:layout_centerVertical="true"
+                android:text="Materia 2" />
+
+            <Button
+                android:id="@+id/button_materia3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignStart="@+id/button_materia1"
+                android:layout_marginBottom="23dp"
+                android:text="Materia 3" />
 
         </RelativeLayout>
 

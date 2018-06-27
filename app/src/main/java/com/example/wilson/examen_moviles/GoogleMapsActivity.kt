@@ -10,7 +10,6 @@ import com.google.android.gms.maps.*
 
 import com.google.android.gms.maps.model.*
 import kotlinx.android.synthetic.main.activity_google_maps.*
-import java.util.*
 import kotlin.collections.ArrayList
 
 class GoogleMapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnCameraMoveStartedListener,
@@ -26,8 +25,22 @@ class GoogleMapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.On
 
     val materiaLatLang = LatLng(-0.21543, -78.42345)
 
+    val materia2LatLang = LatLng(-0.2101171,-78.4884667)
+
+    val materia3LatLang = LatLng(-0.209133, -78.486992)
+
     private val materia: CameraPosition = CameraPosition.Builder()
             .target(materiaLatLang)
+            .zoom(zoom)
+            .build()
+
+    private val materia2: CameraPosition = CameraPosition.Builder()
+            .target(materia2LatLang)
+            .zoom(zoom)
+            .build()
+
+    private val materia3: CameraPosition = CameraPosition.Builder()
+            .target(materia3LatLang)
             .zoom(zoom)
             .build()
 
@@ -68,12 +81,27 @@ class GoogleMapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.On
         with(googleMap) {
 
 
-            button_quito_julio_andrade.setOnClickListener { v ->
-                anadirMarcador(materiaLatLang, "Marcador Materia")
+            button_materia1.setOnClickListener { v ->
+                anadirMarcador(materiaLatLang, "Marcador Materia 1")
 
 
                 moverCamaraPorPosicion(materia)
             }
+
+            button_materia2.setOnClickListener{ v ->
+                anadirMarcador(materia2LatLang, "Marcador Materia 2")
+
+
+                moverCamaraPorPosicion(materia2)
+            }
+
+            button_materia3.setOnClickListener{ v ->
+                anadirMarcador(materia3LatLang, "Marcador Materia 2")
+
+
+                moverCamaraPorPosicion(materia3)
+            }
+
 
 
         }
