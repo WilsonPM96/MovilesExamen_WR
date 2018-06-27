@@ -94,7 +94,7 @@ class ActividadCrear : AppCompatActivity(), View.OnClickListener{
 
         json.put("graduado", "Graduado")
 
-        val httpRequest = Fuel.post("http://172.31.104.12:1337/Estudiante").body(json.toString())
+        val httpRequest = Fuel.post("http://192.168.100.189:1337/Estudiante").body(json.toString())
         httpRequest.headers["Content-Type"] = "application/json"
         httpRequest.response { request, response, result ->
 

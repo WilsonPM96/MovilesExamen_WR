@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="172dp"
+        android:layout_marginTop="92dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,7 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="17dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="32dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="@+id/id_Estudiante"
         app:layout_constraintHorizontal_bias="0.0"
@@ -37,7 +37,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="44dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="@+id/nombre"
         app:layout_constraintHorizontal_bias="1.0"
@@ -49,7 +49,7 @@
         android:layout_width="wrap_content"
         android:layout_height="24dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="52dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="@+id/apellidos"
         app:layout_constraintHorizontal_bias="0.0"
@@ -61,7 +61,7 @@
         android:layout_width="wrap_content"
         android:layout_height="21dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="24dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="@+id/fechaNacimiento"
         app:layout_constraintHorizontal_bias="0.0"
@@ -81,17 +81,28 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/semestreActual"
         app:layout_constraintTop_toBottomOf="@+id/semestreActual"
-        app:layout_constraintVertical_bias="0.197" />
+        app:layout_constraintVertical_bias="0.113" />
 
     <Button
-        android:id="@+id/button_mapa_materia"
+        android:id="@+id/button_map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Ir Mapa"
+        app:layout_constraintEnd_toEndOf="@+id/textView6"
+        app:layout_constraintHorizontal_bias="0.394"
+        app:layout_constraintStart_toStartOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginTop="8dp"
-        android:text="Ir a mapa Materia"
+        android:text="SIC"
         app:layout_constraintEnd_toEndOf="@+id/graduado"
-        app:layout_constraintHorizontal_bias="0.41"
         app:layout_constraintStart_toStartOf="@+id/graduado"
         app:layout_constraintTop_toBottomOf="@+id/graduado" />
+
 </android.support.constraint.ConstraintLayout>

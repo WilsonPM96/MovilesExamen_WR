@@ -28,24 +28,14 @@
             android:layout_marginTop="0dp">
 
             <Button
-                android:id="@+id/button_quito"
+                android:id="@+id/button_quito_julio_andrade"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginStart="59dp"
-                android:layout_marginTop="33dp"
-                android:text="Quito" />
-
-            <Button
-                android:id="@+id/button_quito_julio_andrade"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentStart="true"
-                android:layout_marginBottom="44dp"
-                android:layout_marginStart="50dp"
-                android:text="Julio Andrade" />
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="27dp"
+                android:text="Materia 1" />
 
         </RelativeLayout>
 

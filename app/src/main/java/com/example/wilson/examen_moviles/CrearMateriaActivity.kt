@@ -13,7 +13,9 @@ import com.example.wilson.examen_moviles.baseDeDatos.DbHandlerMateria
 import com.example.wilson.examen_moviles.baseDeDatos.ServicioEstudiante
 import com.example.wilson.examen_moviles.entidades.Estudiante
 import com.example.wilson.examen_moviles.entidades.Materia
+import com.github.kittinunf.fuel.Fuel
 import kotlinx.android.synthetic.main.activity_crear_materia.*
+import org.json.JSONObject
 import java.util.*
 
 class CrearMateriaActivity : AppCompatActivity() {
@@ -61,35 +63,40 @@ class CrearMateriaActivity : AppCompatActivity() {
 
         Log.i("id-estudiante",idEstudiante.toString())
 
-        val dbHandlerMateria = DbHandlerMateria(this)
-
         val nombreMateria:EditText = findViewById(R.id.editText_nombreMateria)
         val codigoMateria:EditText = findViewById(R.id.editText_codigo)
         val descripcionMateria:EditText = findViewById(R.id.editText_descripcion)
         val horasMateria:EditText = findViewById(R.id.editText_numeroHoras)
         val fechaCreacion = Calendar.getInstance()
 
-        val materia = Materia(nombreMateria.text.toString().toInt(),
-                codigoMateria.text.toString(),
-                descripcionMateria.text.toString(),
-                activo.toString(),
-                fechaCreacion.toString(),
-                horasMateria.text.toString().toInt(),
-                idEstudiante)
+        val json = JSONObject()
+        json.put("idMateria", 1)
+        json.put("codigo", codigoMateria.text)
 
-        dbHandlerMateria.insertarMateria(materia.idMateria,
-                materia.codigo,
-                materia.descripcion,
-                materia.activo,
-                materia.fechaCreacion,
-                materia.numeroHorasPorSemana,
-                materia.estudianteId)
+        json.put("descripcion", descripcionMateria.text)
 
-        Log.i("insertar-materia","Se inserto exitosamente")
+        json.put("activo", "1")
 
-        val intent = Intent(this, ActividadListar::class.java)
+        json.put("fechaCreacion", "25062018")
+
+        json.put("numeroHorasPorSemana", horasMateria.text)
+        json.put("estudianteId", idEstudiante)
+
+        val httpRequest = Fuel.post("http://192.168.100.189:1337/Materia").body(json.toString())
+        httpRequest.headers["Content-Type"] = "application/json"
+        httpRequest.response { request, response, result ->
+
+            Log.i("mensaje",request.toString())
+
+            Log.i("mensaje",response.toString())
+
+            Log.i("mensaje",result.toString())
+        }
+
+        val intent = Intent (this, MainActivity::class.java)
         finish()
         startActivity(intent)
+
 
 
     }

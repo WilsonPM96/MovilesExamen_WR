@@ -20,8 +20,10 @@ class HttpFuelActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_http_fuel)
-
-        "http://172.31.104.12:1337/Estudiante/1"
+        button_map.setOnClickListener { view: View ->
+            iraActividadMapa()
+        }
+        "http://192.168.100.189:1337/Estudiante/1"
                 .httpGet()
                 .responseString { request, response, result ->
                     when (result) {
@@ -40,7 +42,7 @@ class HttpFuelActivity : AppCompatActivity() {
                                 val idEstudiante: TextView = findViewById(R.id.id_Estudiante)
                                 val nombreEstudiante: TextView = findViewById(R.id.nombre)
                                 val apellidoEstudiante: TextView = findViewById(R.id.apellidos)
-                                val fechaNacimiento : TextView = findViewById(R.id.fechaNacimiento)
+                                val fechaNacimiento: TextView = findViewById(R.id.fechaNacimiento)
                                 val semestreActual: TextView = findViewById(R.id.semestreActual)
                                 val graduado: TextView = findViewById(R.id.graduado)
                                 idEstudiante.text = (estudiante.idEstudiante.toString())
@@ -65,7 +67,6 @@ class HttpFuelActivity : AppCompatActivity() {
                                 }
 
 
-
                             } else {
                                 Log.i("http-ejemplo", "Estudiante nulo")
                             }
@@ -73,45 +74,46 @@ class HttpFuelActivity : AppCompatActivity() {
 
                         }
                     }
+
                 }
-        boton_mapa.setOnClickListener{
-            view: View -> iraActividadMapa()
-        }
+
+
     }
+
     fun iraActividadMapa() {
         intent = Intent(this, GoogleMapsActivity::class.java)
         startActivity(intent)
     }
-}
 
 
-class Estudiante(var idEstudiante: Int,
-                 var nombres: String,
-                 var apellidos: String,
-                 var fechaNacimiento: String,
-                 var semestreActual: Int,
-                 var graduado: String,
-                 var createdAt: Long,
-                 var updatedAt: Long,
-                 var id: Int,
-                 var materias: List<Materia>) {
-    var createdAtDate = Date(updatedAt)
-    var updatedAtDate = Date(createdAt)
+    class Estudiante(var idEstudiante: Int,
+                     var nombres: String,
+                     var apellidos: String,
+                     var fechaNacimiento: String,
+                     var semestreActual: Int,
+                     var graduado: String,
+                     var createdAt: Long,
+                     var updatedAt: Long,
+                     var id: Int,
+                     var materias: List<Materia>) {
+        var createdAtDate = Date(updatedAt)
+        var updatedAtDate = Date(createdAt)
 
 
-}
+    }
 
-class Materia(var idMateria: Int,
-              var codigo: String,
-              var descripcion: String,
-              var activo: String,
-              var fechaCreacion: String,
-              var numeroHorasPorSemana: Int,
-              var createdAt: Long,
-              var updatedAt: Long,
-              var id: Int,
-              var estudianteId: Int) {
-    var createdAtDate = Date(updatedAt)
-    var updatedAtDate = Date(createdAt)
+    class Materia(var idMateria: Int,
+                  var codigo: String,
+                  var descripcion: String,
+                  var activo: String,
+                  var fechaCreacion: String,
+                  var numeroHorasPorSemana: Int,
+                  var createdAt: Long,
+                  var updatedAt: Long,
+                  var id: Int,
+                  var estudianteId: Int) {
+        var createdAtDate = Date(updatedAt)
+        var updatedAtDate = Date(createdAt)
+    }
 }
 
